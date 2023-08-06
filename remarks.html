@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Few Words to You.</title>
+    <style>
+        /* Your CSS styles */
+		body {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    background-color: #000;
+}
+
+.box {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+img.loading {
+    background-size: cover;
+    top: -50px;
+    position: absolute;
+    width: 1250px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+img.typing{
+	position: absolute;
+	display: none;
+	/* top: ; */
+	left: 25%;
+	display: block;
+	width: 50%;
+	bottom: 0;
+}
+.container {
+	display: none;
+	position: relative;
+	top: 200px;
+    width: 60%;
+	margin: 20px;
+	align-items: center;
+	left: 18%;
+    height: 50px;
+	border-radius: 3px;
+    background-color: #384848;
+    display: inline-block;
+    position: relative; /* Set the container as relative */
+    margin-top: 0;
+    overflow: hidden;
+    z-index: 1; /* Set a higher z-index for the container */
+}
+
+/* Rest of your CSS styles remain unchanged */
+
+
+        .text {
+            font-size: 20px;
+			color: white;
+            letter-spacing: 5px;
+            border-right: 5px solid;
+            font-family: monospace;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 2s steps(10), cursor .4s step-end;
+			filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 20px #fff);
+        }
+
+		.text1 {
+			opacity: 0;
+            font-size: 20px;
+			color: white;
+            letter-spacing: 5px;
+            border-right: 5px solid;
+            font-family: monospace;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 2s steps(12), cursor .4s step-end;
+			filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 20px #fff);
+			animation-delay: 3s;
+        }
+		.text2 {
+			opacity: 0;
+            font-size: 20px;
+			color: white;
+            letter-spacing: 5px;
+            border-right: 5px solid;
+            font-family: monospace;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 2s steps(18), cursor .4s step-end;
+			filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 20px #fff);
+			animation-delay: 6s;
+        }
+		.text3 {
+			opacity: 0;
+            font-size: 20px;
+			color: white;
+            letter-spacing: 5px;
+            border-right: 5px solid;
+            font-family: monospace;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 2s steps(18), cursor .4s step-end;
+			filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 20px #fff);
+			animation-delay: 9s;
+        }
+		.text4 {
+			opacity: 0;
+            font-size: 20px;
+			color: white;
+            letter-spacing: 5px;
+            border-right: 5px solid;
+            font-family: monospace;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 2s steps(18), cursor .4s step-end;
+			filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 20px #fff);
+			animation-delay: 12s;
+        }
+		.text5 {
+			opacity: 0;
+            font-size: 20px;
+			color: white;
+            letter-spacing: 5px;
+            border-right: 5px solid;
+            font-family: monospace;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 2s steps(18), cursor .4s step-end;
+			filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 20px #fff);
+			animation-delay: 15s;
+        }
+		.text6 {
+			opacity: 0;
+            font-size: 20px;
+			color: white;
+            letter-spacing: 5px;
+            border-right: 5px solid;
+            font-family: monospace;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 2s steps(18), cursor .4s step-end;
+			filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 20px #fff);
+			animation-delay: 18s;
+        }
+		.text7 {
+			opacity: 0;
+            font-size: 20px;
+			color: white;
+            letter-spacing: 5px;
+            border-right: 5px solid;
+            font-family: monospace;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 2s steps(18), cursor .4s step-end;
+			filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 20px #fff);
+			animation-delay: 21s;
+        }
+		.text8 {
+			opacity: 0;
+            font-size: 20px;
+			color: white;
+            letter-spacing: 5px;
+            border-right: 5px solid;
+            font-family: monospace;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 2s steps(10), cursor .4s step-end;
+			filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 20px #fff);
+			animation-delay: 24s;
+        }
+		.text9 {
+			opacity: 0;
+            font-size: 20px;
+			color: white;
+            letter-spacing: 5px;
+            border-right: 5px solid;
+            font-family: monospace;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 2s steps(5), cursor .4s step-end;
+			filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 20px #fff);
+			animation-delay: 27s;
+        }
+		.text10 {
+			opacity: 0;
+            font-size: 20px;
+			color: white;
+            letter-spacing: 5px;
+            border-right: 5px solid;
+            font-family: monospace;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 2s steps(7), cursor .4s step-end;
+			filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 20px #fff);
+			animation-delay: 30s;
+        }
+        /* Add more text styles as needed */
+        /* .text4 { ... } */
+        /* .text5 { ... } */
+
+        @keyframes cursor {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="img/loding.gif" alt="" class="loading">
+        <img src="img/typing.gif" alt="" class="typing">
+        <div class="container">
+            <!-- The initial text with class "text" -->
+            <p class="text">First of all Happiest Birthday to you.</p>
+            <p class="text1">I know it's not much but I tried and I promise,</p>
+            <p class="text2">The next time will be awesome. </p>
+            <p class="text3">You know I can make it awesome :3</p>
+            <p class="text4">I tried to make it fun and enjoyable to you.</p>
+            <p class="text5">You have been studying a lot and,</p>
+            <p class="text6">You know, I kinda wanted to cheer you up a bit.</p>
+            <p class="text7">I know you have an exam so...</p>
+            <p class="text8">I won't spoil your time, Enjoy your day,</p>
+            <p class="text9">P.s. I Love You...♥♥♥</p>
+            <p class="text10">Call me when you finish this...</p>
+        </div>
+    </div>
+
+    <script>
+        function showNextText(currentText, nextText, delay) {
+            setTimeout(() => {
+                currentText.style.opacity = '0'; // Hide the current text
+                currentText.style.borderRight = 'none'; // Remove border
+                setTimeout(() => {
+                    currentText.style.display = 'none'; // Hide the current text completely
+                    nextText.style.display = 'block'; // Show the next text
+                    nextText.style.opacity = '1'; // Show the next text
+                    nextText.style.borderRight = '5px solid'; // Add border to the next text
+                },300); // A small delay before showing the next text to give time for previous text to fade out
+            }, delay);
+        }
+
+        // Set opacity to 1 after the animation starts for each line
+        setTimeout(() => {
+            document.querySelector('.typing').style.display = 'none';
+            document.querySelector('.container').style.display = 'none';
+        });
+        setTimeout(() => {
+            document.querySelector('.loading').style.display = 'none';
+            document.querySelector('.typing').style.display = 'block';
+            document.querySelector('.container').style.display = 'block';
+        }, 5000);
+        setTimeout(() => {
+            const currentText = document.querySelector('.text');
+            const nextText = document.querySelector('.text1');
+            showNextText(currentText, nextText, 2000);
+        }, 7000);
+        setTimeout(() => {
+            const currentText = document.querySelector('.text1');
+            const nextText = document.querySelector('.text2');
+            showNextText(currentText, nextText, 2000);
+        }, 10000);
+		setTimeout(() => {
+            const currentText = document.querySelector('.text2');
+            const nextText = document.querySelector('.text3');
+            showNextText(currentText, nextText, 2000);
+        }, 12000);
+		setTimeout(() => {
+            const currentText = document.querySelector('.text3');
+            const nextText = document.querySelector('.text4');
+            showNextText(currentText, nextText, 2000);
+        }, 15000);
+		setTimeout(() => {
+            const currentText = document.querySelector('.text4');
+            const nextText = document.querySelector('.text5');
+            showNextText(currentText, nextText, 2000);
+        }, 18000);
+		setTimeout(() => {
+            const currentText = document.querySelector('.text5');
+            const nextText = document.querySelector('.text6');
+            showNextText(currentText, nextText, 2000);
+        }, 21000);
+		setTimeout(() => {
+            const currentText = document.querySelector('.text6');
+            const nextText = document.querySelector('.text7');
+            showNextText(currentText, nextText, 2000);
+        }, 24000);
+		setTimeout(() => {
+            const currentText = document.querySelector('.text7');
+            const nextText = document.querySelector('.text8');
+            showNextText(currentText, nextText, 2000);
+        }, 27000);
+		setTimeout(() => {
+            const currentText = document.querySelector('.text8');
+            const nextText = document.querySelector('.text9');
+            showNextText(currentText, nextText, 2000);
+        }, 30000);
+		setTimeout(() => {
+            const currentText = document.querySelector('.text9');
+            const nextText = document.querySelector('.text10');
+            showNextText(currentText, nextText, 2000);
+        }, 33000);
+        // Add more setTimeout calls as needed for other texts
+    </script>
+</body>
+</html>

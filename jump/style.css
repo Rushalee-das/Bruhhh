@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+    overflow: hidden;
+    margin: 0;
+}
+
+.main{
+    position: absolute;
+    color: #fff;
+    width: 20px;
+    height: 22px;
+    border-radius: 2px;
+    text-decoration: none;
+    text-align: center;
+    background-color: red;
+    top: 10px;
+    left: 1215px;
+}
+
+@font-face {
+    font-family: 'PixelGamerPersonalUse'; /* Use any name you want to refer to the font */
+    src: url('jump\PixelGamerPersonalUse-rg61L.otf') format('opentype'); /* Replace 'path/to/your-font.ttf' with the actual path to your font file */
+    /* You can also provide multiple formats (e.g., woff, woff2) to support different browsers */
+}
+
+.game-over-text {
+    font-family: 'PixelGamerPersonalUse', Arial, sans-serif; /* Use your custom font first, then fallback to Arial and sans-serif */
+    font-size: 40px;
+    color: red;
+}
+
+/* Use this font for the 'Reset' button text */
+.reset-button-text {
+    font-family: 'PixelGamerPersonalUse', Arial, sans-serif; /* Use your custom font first, then fallback to Arial and sans-serif */
+    font-size: 20px;
+    color: white;
+}
+
+canvas {
+    position: absolute;
+    left: 10px;
+    border: 2px solid #fff;
+}

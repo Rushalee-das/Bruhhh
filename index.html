@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bruh</title>
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .bg-image{
+            background-size: cover;
+            position: relative;
+            height: 100vh;
+            margin: 0;
+        }
+      #popup {
+        background-color: #849b94;
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 200px;
+        width: 300px;
+        padding: 20px;
+        text-align: center;
+        animation: popup-animation 0.3s ease-in-out;
+      }
+
+      @keyframes popup-animation {
+        0% {
+          opacity: 0;
+          transform: translate(-50%, -60%);
+        }
+        100% {
+          opacity: 1;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      /* #popup img {
+        width: 200px;
+        height: 200px;
+        top: -50px;
+        left: 70px;
+        position: absolute;
+      } */
+      #cat1{
+        display: block;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: -50px;
+        left: 70px;
+      }
+
+      #cat2{
+        display: none;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 10px;
+        left: 110px;
+      }
+
+      #cat3{
+        display: none;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 10px;
+        left: 110px;
+      }
+
+      #popup p {
+        margin-top: 98px;
+      }
+
+      #popup button {
+        padding: 10px 20px;
+        margin: 0 10px;
+      }
+
+      .popup-yes{
+        top: 170px;
+        color: black;
+        background-color: #fff;
+        border: none;
+        height: 40px;
+        width: 70px;
+        border-radius: 5px;
+        left: 70px;
+        position: absolute;
+      }
+
+      .popup-no{
+        top: 170px;
+        color: black;
+        background-color: #fff;
+        border: none;
+        height: 40px;
+        width: 70px;
+        border-radius: 5px;
+        left: 170px;
+        position: absolute;
+      }
+
+      #initial-button {
+        position: absolute;
+        left: 43%;
+        top: 60%;
+        background: #fff;
+        color: #fff;
+        border: none;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        letter-spacing: 0.1rem;
+        font-weight: 400;
+        padding: 10px 30px;
+        transition: 0.5s;
+      }
+
+      #initial-button:hover{
+        background: var(--clr);
+        color: var(--clr);
+        letter-spacing: 0.25rem;
+        box-shadow: 0 0 25px var(--clr);
+      }
+
+      #initial-button::before{
+        content: ' ';
+        position: absolute;
+        inset: 2px;
+        background: #000;
+      }
+
+      #initial-button span{
+        position: relative;
+        z-index: 1
+      }
+      #initial-button i{
+        position: relative;
+        inset: 0;
+        display: block;
+      }
+
+      #initial-button i::before{
+        content: '';
+        position: absolute;
+        top: -39px;
+        left: 80%;
+        width: 30px;
+        height: 4px;
+        background: black;
+        transform: translateX(-50%) skewX(325deg);
+        transition: 0.5s;
+      }
+
+      #initial-button:hover i::before{
+        width: 70px;
+        left: 20%;
+      }
+
+      #initial-button i::after{
+        content: '';
+        position: absolute;
+        top: 7.7px;
+        left: 20%;
+        width: 30px;
+        height: 4px;
+        background: black;
+        transform: translateX(-50%) skewX(325deg);
+        transition: 0.5s;
+      }
+
+      #initial-button:hover i::after{
+        width: 70px;
+        left: 80%;
+      }
+
+      #submit-button {
+        display: none;
+        top: 60%;
+        left: 43%;
+        position: absolute;
+        background: #fff;
+        color: #fff;
+        border: none;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        letter-spacing: 0.1rem;
+        font-weight: 400;
+        padding: 10px 30px;
+        transition: 0.5s;
+      }
+
+      #submit-button:hover{
+        background: var(--clr);
+        color: var(--clr);
+        letter-spacing: 0.25rem;
+        box-shadow: 0 0 25px var(--clr);
+      }
+
+      #submit-button::before{
+        content: ' ';
+        position: absolute;
+        inset: 2px;
+        background: #000;
+      }
+
+      #submit-button span{
+        position: relative;
+        z-index: 1
+      }
+      #submit-button i{
+        position: relative;
+        inset: 0;
+        display: block;
+      }
+
+      #submit-button i::before{
+        content: '';
+        position: absolute;
+        top: -39px;
+        left: 80%;
+        width: 30px;
+        height: 4px;
+        background: black;
+        transform: translateX(-50%) skewX(325deg);
+        transition: 0.5s;
+      }
+
+      #submit-button:hover i::before{
+        width: 70px;
+        left: 20%;
+      }
+
+      #submit-button i::after{
+        content: '';
+        position: absolute;
+        top: 7.7px;
+        left: 20%;
+        width: 30px;
+        height: 4px;
+        background: black;
+        transform: translateX(-50%) skewX(325deg);
+        transition: 0.5s;
+      }
+
+      #submit-button:hover i::after{
+        width: 70px;
+        left: 80%;
+      }
+
+      #text2{
+        top: 41px;
+        left: 68px;
+        position: absolute;
+      }
+      #popup-no {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="img\bgg.jpg" class="bg-image" alt="">
+    <button id="initial-button" style="--clr:#77c8cc" onClick="document.getElementById('initial-button').style.display='block'"><span>Click Me</span><i></i></button>
+
+    <div id="popup">
+      <img src="img\cat1.png" id="cat1" alt="Image">
+      <img src="img\cat2.png" id="cat2" alt="Image">
+      <img src="img\cat3.png" id="cat3" alt="Image">
+      <p id="text1">Do you wanna trust me?</p>
+      <p id="text2">(you know I can hack you tho)</p>
+      <button id="popup-yes" class="popup-yes">Yes</button>
+      <button id="popup-no" class="popup-no">No</button>
+    </div>
+
+    <button id="submit-button" onclick="redirectToLoginPage()" style="--clr:#42bc83"><span>Click Me</span><i></i></button>
+
+    <script>
+      const initialButton = document.getElementById('initial-button');
+      const popup = document.getElementById('popup');
+      const popupYesBtn = document.getElementById('popup-yes');
+      const popupNoBtn = document.getElementById('popup-no');
+      const submitButton = document.getElementById('submit-button');
+      const btn = document.getElementById('initial-button');
+      const text1 = document.getElementById('text1');
+      const text2 = document.getElementById('text2');
+      const cat1 = document.getElementById('cat1');
+      const cat2 = document.getElementById('cat2');
+      const cat3 = document.getElementById('cat3');
+
+
+        btn.addEventListener('click', () => {
+        btn.style.display = 'none';
+
+        const box = document.getElementById('box');
+        box.style.display = 'block';
+        });
+
+
+      let noClickCount = 0;
+
+      function showPopup() {
+        popup.style.display = 'block';
+        popup.classList.add('animate');
+      }
+
+      function hidePopup() {
+        popup.style.display = 'none';
+        popup.classList.remove('animate');
+      }
+
+      function handleNoClick() {
+        noClickCount++;
+        if (noClickCount > 3) {
+          cat2.style.display = 'none';
+          cat3.style.display = 'block';
+          text1.innerHTML=" Well you see > <";
+          text2.innerHTML = "You don't have any chance now, hehe!!";
+          text2.style.transform = 'translateX(-20px)';
+          popupNoBtn.style.display = 'none'; 
+          popupYesBtn.style.transform = 'translateX(50px)';
+        } 
+        else if(noClickCount===3)
+        {
+            text1.innerHTML=" fuck you";
+            text2.innerHTML = "seriously you don't trust me??";
+            cat1.style.display = 'none';
+            cat2.style.display = 'block';
+
+
+        }
+        else {
+          hidePopup();
+          setTimeout(showPopup, 100); 
+        }
+      }
+
+      function handleYesClick() {
+        hidePopup();
+        submitButton.style.display = 'block'; 
+        initialButton.style.display = 'none'; 
+
+      }
+
+      popupYesBtn.addEventListener('click', handleYesClick);
+      popupNoBtn.addEventListener('click', handleNoClick);
+
+      initialButton.addEventListener('click', showPopup);
+      function redirectToLoginPage() {
+      window.location.href = "login.html";
+    }
+    </script>
+  </body>
+</html>
